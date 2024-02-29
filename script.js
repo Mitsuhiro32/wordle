@@ -64,6 +64,7 @@ function intentar() {
 
 function leerIntento() {
     const VALOR = INPUT.value;
+    VALOR.trim();
 
     if (VALOR === "" || VALOR === null || VALOR === undefined || VALOR.length !== 5 || !isNaN(VALOR)) {
         alert("Debes ingresar una palabra con 5 letras!");

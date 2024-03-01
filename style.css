@@ -6,8 +6,7 @@ body {
 h1 {
     color: #fff;
     text-align: center;
-    margin-top: 50px;
-    font-size: 36px;
+    font-size: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -15,7 +14,7 @@ h1 {
     color: #fff;
     text-align: center;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -34,7 +33,7 @@ h1 {
     margin: 0 auto;
     padding: 10px 20px;
     font-size: 18px;
-    background-color: rgba(44, 183, 183, 0.8);
+    background-color: rgba(34, 49, 63, 0.8);
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -43,7 +42,7 @@ h1 {
 }
 
 #guess-button:hover {
-    background-color: rgba(44, 183, 183, 1);
+    background-color: rgba(34, 49, 63, 1);
 }
 
 button:active {
@@ -81,4 +80,23 @@ button:active {
     margin-top: 20px;
     font-size: 16px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#reset-button {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: rgba(34, 49, 63, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: none;
+}
+
+#reset-button:hover {
+    background-color: rgba(34, 49, 63, 1);
 }

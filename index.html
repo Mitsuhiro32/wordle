@@ -10,8 +10,7 @@
 <body>
     <h1>Wordle PPY</h1>
     <h2 id="intentos">Intentos restantes: 6</h2>
-    <p id="description">Intenta adivinar la palabra de 5 letras</p>
-    <input type="text" id="guess-input" placeholder="Escribe la palabra" onkeydown="return /[a-zñáéíóúÁÉÍÓÚ]/i.test(event.key)" maxlength="5">
+    <input type="text" id="guess-input" placeholder="Adivine la palabra de 5 letras" onkeydown="return /[a-zñáéíóúÁÉÍÓÚ]/i.test(event.key)" maxlength="5">
     <button type="button" id="guess-button">Intentar</button>
     <div id="grid"></div>
     <p id="guesses"></p>

@@ -1,47 +1,46 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0');
+    background-size: cover;
 }
 
 h1 {
     color: #fff;
     text-align: center;
-    font-size: 30px;
+    font-size: 2em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#description {
-    color: #fff;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 16px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 #guess-input {
     display: block;
     margin: 0 auto 20px;
-    padding: 10px;
-    font-size: 18px;
-    width: 250px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    font-size: 1em;
+    width: 80%;
+    max-width: 250px;
+    border: solid 1.5px #fff;
+    border-radius: 1rem;
+    background: #ccc;
+    padding: 1rem;
+    color: #000;
 }
 
-#guess-button {
+#guess-button, #reset-button {
     display: block;
     margin: 0 auto;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 1em;
     background-color: rgba(34, 49, 63, 0.8);
     color: #fff;
     border: none;
-    border-radius: 3px;
+    border-radius: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 80%;
+    max-width: 250px;
+    text-align: center;
 }
 
-#guess-button:hover {
+#guess-button:hover, #reset-button:hover {
     background-color: rgba(34, 49, 63, 1);
 }
 
@@ -51,7 +50,7 @@ button:active {
 
 .letter {
     border: 1px solid #ccc;
-    font-size: 20px;
+    font-size: 1.2em;
     padding: 3px;
     margin: 3px;
     min-width: 20px;
@@ -78,25 +77,18 @@ button:active {
     color: #fff;
     text-align: center;
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 1em;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 #reset-button {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: rgba(34, 49, 63, 0.8);
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
     display: none;
 }
 
-#reset-button:hover {
-    background-color: rgba(34, 49, 63, 1);
+#guesses {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }

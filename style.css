@@ -1,7 +1,8 @@
 body {
     font-family: 'Helvetica Neue', sans-serif;
-    background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0');
+    background-image: url('https://images.unsplash.com/photo-1592431913823-7af6b323da9b');
     background-size: cover;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -50,7 +51,7 @@ button:active {
 
 .letter {
     border: 1px solid #ccc;
-    font-size: 1.2em;
+    font-size: 1.5em;
     padding: 3px;
     margin: 3px;
     min-width: 20px;
@@ -128,5 +129,6 @@ button:active {
 }
 
 #contenido.blur {
-    filter: blur(8px);
+    filter: blur(4px);
+    pointer-events: none;
 }

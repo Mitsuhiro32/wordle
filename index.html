@@ -8,12 +8,16 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Wordle PPY</h1>
-    <h2 id="intentos">Intentos restantes: 6</h2>
-    <input type="text" id="guess-input" placeholder="Adivine la palabra de 5 letras" onkeydown="return /[a-zñáéíóúÁÉÍÓÚ]/i.test(event.key)" maxlength="5">
-    <button type="button" id="guess-button">Intentar</button>
-    <div id="grid"></div>
-    <p id="guesses"></p>
-    <button type="button" id="reset-button">Reiniciar</button>
+    <div id="contenido">
+        <h1>Wordle PPY</h1>
+        <h2 id="intentos">Intentos restantes: 6</h2>
+        <input type="text" id="guess-input" placeholder="Adivine la palabra de 5 letras" onkeydown="return /[a-zñáéíóúÁÉÍÓÚ]/i.test(event.key)" maxlength="5">
+        <button type="button" id="guess-button">Intentar</button>
+        <div id="grid"></div>
+    </div>
+    <div id="msj">
+        <p id="guesses"></p>
+        <button type="button" id="reset-button">Reiniciar</button>
+    </div>
 </body>
 </html>

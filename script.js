@@ -9,13 +9,13 @@ fetch("https://random-word-api.vercel.app/api?words=1&length=5&type=uppercase")
 })
 .then((response) => {
     palabra = response[0];
-    console.log(palabra);
+    // console.log(palabra);
 })
 .catch((error) => {
     console.log("Error: " + error);
     // Si hay un error, selecciona una palabra aleatoria del diccionario
     palabra = diccionario[Math.floor(Math.random() * diccionario.length)];
-    console.log(palabra);
+    // console.log(palabra);
 });
 
 const INPUT = document.getElementById("guess-input");
@@ -56,21 +56,21 @@ function intentar() {
                     // Pintar en verde la letra en la posición correcta
                     SPAN.innerHTML = INTENTO[i];
                     SPAN.style.backgroundColor = "#7bd389";
-                    console.log("Se encontró la letra " + INTENTO[i]);
+                    // console.log("Se encontró la letra " + INTENTO[i]);
                     // Eliminar la letra de la copia de la palabra oculta
                     aux = aux.replace(INTENTO[i], "");
                 } else if (aux.includes(INTENTO[i])) {
                     // Pintar en amarillo la letra en la posición incorrecta
                     SPAN.innerHTML = INTENTO[i];
                     SPAN.style.backgroundColor = "#f7e157";
-                    console.log("La letra " + INTENTO[i] + " está en la palabra, pero en la posición incorrecta");
+                    // console.log("La letra " + INTENTO[i] + " está en la palabra, pero en la posición incorrecta");
                     // Eliminar la letra de la copia de la palabra oculta
                     aux = aux.replace(INTENTO[i], "");
                 } else {
                     // Pintar en gris la letra que no está en la palabra
                     SPAN.innerHTML = INTENTO[i];
                     SPAN.style.backgroundColor = "#d3d3d3";
-                    console.log("La letra " + INTENTO[i] + " no está en la palabra");
+                    // console.log("La letra " + INTENTO[i] + " no está en la palabra");
                 }
                 ROW.appendChild(SPAN);
             }
@@ -80,7 +80,7 @@ function intentar() {
             console.log("¡Fallaste! Te quedan " + intentos + " intentos.");
             INTENTOS.innerHTML = "Intentos restantes: " + intentos;
             if (intentos === 0) {
-                terminar("<h1>PERDISTE!😖</h1>");
+                terminar("<h1>PERDISTE!😖</h1><p>La palabra correcta era: </p>" + palabra);
             }
         }
     }
@@ -103,9 +103,11 @@ function terminar(mensaje) {
     BUTTON.disabled = true;
     BUTTON.style.backgroundColor = "#d3d3d3";
     BUTTON.style.cursor = "not-allowed";
+    document.getElementById("msj").style.display = "block";
     let contenedor = document.getElementById("guesses");
     contenedor.innerHTML = mensaje;
     document.getElementById("reset-button").style.display = "block";
+    document.getElementById("contenido").classList.add('blur') // Agrega la clase 'blur' al cuerpo del documento
 }
 
 function reiniciar() {
